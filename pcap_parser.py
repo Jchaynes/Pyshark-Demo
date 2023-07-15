@@ -1,23 +1,47 @@
 import argparse
+import csv
 import logging
 import os
 from collections import defaultdict
 from ipaddress import IPv4Address, IPv6Address, ip_network
 
 import pyshark
+from pyshark.packet.packet import Packet
+from pyshark.capture.file_capture import FileCapture
 
 
 class PcapParser:
-    def __init__(self, directory: str, output_file: str = "known_hosts.txt", extract_files: bool = False):
+    def __init__(self, directory: str, output_file: str = "known_hosts.txt"):
         self.directory = directory
-        self.file_captures = []
+        self._file_captures = list
         self.output_file = output_file
-        self.ipv4_hosts = set()
-        self.ipv6_hosts = set()
-        self.host_interactions = defaultdict(set)
+        self._ipv4_hosts = set()
+        self._ipv6_hosts = set()
+        self._host_interactions = defaultdict(set)
+        self._parsed_packets = list
         self.logger = logging.getLogger("PcapParser")
         self.logger.setLevel(logging.INFO)
         self.logger.addHandler(logging.StreamHandler())
+
+    @property
+    def file_captures(self):
+        return self._file_captures
+
+    @property
+    def ipv4_hosts(self):
+        return self._ipv4_hosts
+
+    @property
+    def ipv6_hosts(self):
+        return self._ipv6_hosts
+
+    @property
+    def host_interactions(self):
+        return self._host_interactions
+
+    @property
+    def parsed_packets(self):
+        return self._parsed_packets
 
     def read_pcap_files(self, display_filter: str = "", print_files: bool = False) -> None:
         valid_extensions = (".pcap", ".pcapng", ".cap")
@@ -26,7 +50,7 @@ class PcapParser:
             if file_name.lower().endswith(valid_extensions):
                 file_path = os.path.join(self.directory, file_name)
                 capture = pyshark.FileCapture(file_path, display_filter=display_filter)
-                self.file_captures.append(capture)
+                self._file_captures.append(capture)
                 self.logger.info(f"Found pcap file: {file_name} ({file_path})")
 
                 if print_files:
@@ -88,6 +112,9 @@ class PcapParser:
                     self.host_interactions[source_ip].add(destination_ip)
                     self.host_interactions[destination_ip].add(source_ip)
 
+                self._parsed_packets.append(packet)
+
+
         sorted_ipv4_hosts = sorted(self.ipv4_hosts, key=lambda ip: (ip_network(ip).network_address, ip))
         sorted_ipv6_hosts = sorted(self.ipv6_hosts, key=lambda ip: (ip_network(ip).network_address, ip))
 
@@ -117,6 +144,17 @@ class PcapParser:
             for host, interactions in self.host_interactions.items():
                 writer.writerow([host, ", ".join(interactions)])
 
+    def get_http_packets(self) -> list:
+        http_packets = [packet for packet in self.parsed_packets if hasattr(packet, "http")]
+        return http_packets
+    
+
+    def get_http_data_packets(self) -> list[Packet]:
+        http_packets = self.get_http_packets()
+        http_data_packets = [packet for packet in http_packets if hasattr(packet.http, "file_data")]
+        return http_data_packets
+    
+
 def main(pcap_directory: str, output_file: str = "known_hosts.txt"):
     pcap_parser = PcapParser(pcap_directory, output_file)
 
@@ -128,7 +166,12 @@ def main(pcap_directory: str, output_file: str = "known_hosts.txt"):
 
     # Store the host interactions
     pcap_parser.store_hosts_interactions()
-    pcap_parser
+    http_packets = pcap_parser.get_http_packets()
+    potential_requested_urls = [packet.http.get_field_value("request_full_uri") for packet in http_packets]
+    requested_urls = [url for url in potential_requested_urls if url is not None]
+    requested_urls.sort()
+    
+    return
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="PCAP Parser")

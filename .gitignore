@@ -161,3 +161,4 @@ cython_debug/
 
 known_hosts.txt
 host_interactions.txt
+exercises/answers/
