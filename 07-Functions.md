@@ -1,3 +1,4 @@
+<span style="color:green"><em>Unclassified</em></span>
 # Functions
 1. Defining a Function:
    * Functions are defined using the `def` keyword followed by the function name and parentheses containing optional parameters.
@@ -70,3 +71,4 @@ print(x)    # Output: 10 (outer variable is not affected)
 In this example, we have an outer variable `x` with a value of 10. Inside the `my_function()` function, there is an inner variable `x` with a value of 20, which shadows the outer variable. When we print `x` within the function, it refers to the inner variable, so the output is 20. However, outside the function, when we print `x`, it refers to the outer variable, so the output is 10.
 
 Variable shadowing can lead to confusion and bugs in code, especially when the intention is to use the outer variable but it gets accidentally shadowed. It's generally recommended to avoid variable shadowing and use different names for variables in different scopes to maintain clarity and prevent unexpected behavior.
+<span style="color:green"><em>Unclassified</em></span>

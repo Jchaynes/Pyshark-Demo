@@ -1,3 +1,4 @@
+<span style="color:green"><em>Unclassified</em></span>
 File handling refers to the process of working with files in a computer's file system using a programming language. It involves tasks such as reading data from files, writing data to files, and manipulating file contents.
 
 In Python, file handling is achieved through built-in functions and methods provided by the file object. Here's a brief explanation of the basic file handling operations:
@@ -97,3 +98,4 @@ Exceptions and error handling in Python are mechanisms that allow you to handle 
    * In the above example, the file is opened and accessed within the `with` statement. The file object is automatically closed at the end of the block, ensuring proper resource management.
 
 Using context managers with the `with` statement simplifies error handling and ensures that file resources are properly managed. It eliminates the need to manually close the file and provides a cleaner and more concise way to handle file-related exceptions.
+<span style="color:green"><em>Unclassified</em></span>s

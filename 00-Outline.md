@@ -1,3 +1,4 @@
+ <span style="color:green"><em>Unclassified</em></span>
 # Introduction to Python
 
 1. What is Python?
@@ -31,7 +32,4 @@
  * Basic concepts of OOP: classes, objects, attributes, and methods.
  * Creating classes and objects in Python.
  * Encapsulation, inheritance, and polymorphism.
-8. Additional Topics (Optional)
- * Introduction to libraries and modules (e.g., math, random, datetime).
- * Introduction to working with external APIs.
- * Introduction to data visualization using libraries like Matplotlib.
+<span style="color:green"><em>Unclassified</em></span>

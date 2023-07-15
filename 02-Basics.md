@@ -1,3 +1,4 @@
+<span style="color:green"><em>Unclassified</em></span>
 # Python Basics
   ## Python syntax and structure:
   * Python syntax is whitespace driven.
@@ -132,3 +133,4 @@ In the example above:
         Remainder: 1
         Exponent: 1000
     ```
+<span style="color:green"><em>Unclassified</em></span>

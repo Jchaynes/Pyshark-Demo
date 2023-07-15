@@ -1,3 +1,4 @@
+<span style="color:green"><em>Unclassified</em></span>
 # Tuples
 1. Creating a Tuple:
    * Tuples are created by enclosing comma-separated values in parentheses `()`.
@@ -75,3 +76,4 @@ In Example 1, we have a tuple `person` containing three elements. By unpacking t
 In Example 2, we have a tuple `fruits` containing four elements. Using the `*` operator, we assign the first element of the tuple to the variable `first_fruit`, and the remaining elements are assigned to the `remaining_fruits` variable as a list. This allows us to handle the remaining elements flexibly without explicitly specifying each variable.
 
 By utilizing the `*` unpacking operator, we can handle tuples with varying lengths and assign their values to individual variables or gather remaining elements as a list.
+<span style="color:green"><em>Unclassified</em></span>

@@ -1,3 +1,4 @@
+<span style="color:green"><em>Unclassified</em></span>
 # Modules and Packages
 Modules and packages are essential components of organizing and reusing code in Python. 
 
@@ -47,3 +48,4 @@ Modules and packages are essential components of organizing and reusing code in 
      ```
 
 Modules and packages promote code reuse and organization. They allow you to split your code into manageable units, making it easier to develop, maintain, and collaborate on projects. By importing modules and packages, you can leverage existing code functionality and access their variables, functions, and classes within your programs.
+<span style="color:green"><em>Unclassified</em></span>
