@@ -55,17 +55,17 @@ Exceptions and error handling in Python are mechanisms that allow you to handle 
 
 
 1. Exceptions:
-   - Exceptions are objects that represent errors or exceptional conditions that occur during program execution.
-   - When an exception occurs, it disrupts the normal flow of the program and raises an error.
-   - Examples of file-related exceptions include `FileNotFoundError` (when a file does not exist), `PermissionError` (when there is a permission issue), or `IOError` (general input/output error).
-   - Python provides a range of built-in exception types, and you can also create custom exceptions.
-   - Exceptions can be caught and handled using try-except blocks.
+   * Exceptions are objects that represent errors or exceptional conditions that occur during program execution.
+   * When an exception occurs, it disrupts the normal flow of the program and raises an error.
+   * Examples of file-related exceptions include `FileNotFoundError` (when a file does not exist), `PermissionError` (when there is a permission issue), or `IOError` (general input/output error).
+   * Python provides a range of built-in exception types, and you can also create custom exceptions.
+   * Exceptions can be caught and handled using try-except blocks.
 
 2. Error Handling with try-except:
-   - To handle exceptions, you can use a try-except block.
-   - The code that may raise an exception is placed inside the try block, and the except block defines the code to be executed if an exception of the specified type occurs.
-   - Multiple except blocks can be used to handle different types of exceptions.
-   - Example:
+   * To handle exceptions, you can use a try-except block.
+   * The code that may raise an exception is placed inside the try block, and the except block defines the code to be executed if an exception of the specified type occurs.
+   * Multiple except blocks can be used to handle different types of exceptions.
+   * Example:
      ```python
      try:
          file = open("example.txt", "r")
@@ -80,9 +80,9 @@ Exceptions and error handling in Python are mechanisms that allow you to handle 
      ```
 
 3. Using Context Managers (with statement):
-   - Context managers provide a convenient way to manage resources, such as file objects, by automatically handling their opening and closing.
-   - The `with` statement is used with context managers, ensuring that the resources are properly managed and automatically closed even if an exception occurs.
-   - Example:
+   * Context managers provide a convenient way to manage resources, such as file objects, by automatically handling their opening and closing.
+   * The `with` statement is used with context managers, ensuring that the resources are properly managed and automatically closed even if an exception occurs.
+   * Example:
      ```python
      try:
          with open("example.txt", "r") as file:
@@ -94,6 +94,6 @@ Exceptions and error handling in Python are mechanisms that allow you to handle 
          print("Error occurred:", str(e))
      ```
 
-   - In the above example, the file is opened and accessed within the `with` statement. The file object is automatically closed at the end of the block, ensuring proper resource management.
+   * In the above example, the file is opened and accessed within the `with` statement. The file object is automatically closed at the end of the block, ensuring proper resource management.
 
 Using context managers with the `with` statement simplifies error handling and ensures that file resources are properly managed. It eliminates the need to manually close the file and provides a cleaner and more concise way to handle file-related exceptions.
