@@ -1,4 +1,4 @@
- <span style="color:green"><em>Unclassified</em></span>
+Unclassified
 # Introduction to Python
 
 1. What is Python?
@@ -32,4 +32,4 @@
  * Basic concepts of OOP: classes, objects, attributes, and methods.
  * Creating classes and objects in Python.
  * Encapsulation, inheritance, and polymorphism.
-<span style="color:green"><em>Unclassified</em></span>
+Unclassified

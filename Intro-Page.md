@@ -1,4 +1,4 @@
-<span style="color:green"><em>Unclassified</em></span>.</p>
+Unclassified.</p>
 Unclassified
 
 
@@ -13,4 +13,4 @@ Requirements: Python3, Wireshark, Pip
 
 
 Unclassified
-<span style="color:green"><em>Unclassified</em></span>.</p>
+Unclassified.</p>

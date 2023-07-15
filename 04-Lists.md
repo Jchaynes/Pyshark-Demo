@@ -1,4 +1,4 @@
-<span style="color:green"><em>Unclassified</em></span>
+Unclassified
 # Lists are a versatile data structure in Python that allow you to store and manipulate a collection of items. Here's an elaboration on working with lists, including examples and list comprehension:
 
 1. Creating a List:

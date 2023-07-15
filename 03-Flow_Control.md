@@ -1,4 +1,4 @@
-<span style="color:green"><em>Unclassified</em></span>
+Unclassified
 # Flow Control
 ## Conditional Statements:
 
@@ -58,4 +58,4 @@
       else:
           print(num)
   ```
-<span style="color:green"><em>Unclassified</em></span>
+Unclassified

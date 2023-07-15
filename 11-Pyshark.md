@@ -1,4 +1,4 @@
-<span style="color:green"><em>Unclassified</em></span>
+Unclassified
 # PyShark
 The PyShark library is a Python wrapper for the popular packet analysis tool called Wireshark. It allows you to capture, dissect, and analyze network packets programmatically using Python. Here's a brief introduction and explanation of PyShark:
 
@@ -44,4 +44,4 @@ The PyShark library is a Python wrapper for the popular packet analysis tool cal
    * PyShark integrates well with other Python libraries and tools, enabling seamless integration into larger projects or workflows.
 
 PyShark simplifies the process of capturing and analyzing network packets, making it a valuable tool for network engineers, security analysts, and developers working with network-related applications. It combines the power of Wireshark with the ease of Python programming, providing a convenient way to work with network packet data.
-<span style="color:green"><em>Unclassified</em></span>
+Unclassified

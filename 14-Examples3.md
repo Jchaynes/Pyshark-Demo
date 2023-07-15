@@ -1,4 +1,4 @@
-<span style="color:green"><em>Unclassified</em></span>
+Unclassified
 ```python
 import pyshark
 import sys
@@ -80,4 +80,4 @@ python pcap_parser.py my_capture.pcap ip.src 192.168.0.0/24 tcp
 ```
 
 This version of the program allows you to filter packets based on both IP address range and protocol type, in addition to extracting the desired attribute.
-<span style="color:green"><em>Unclassified</em></span>
+Unclassified

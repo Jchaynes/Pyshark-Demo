@@ -1,4 +1,4 @@
-<span style="color:green"><em>Unclassified</em></span>
+Unclassified
 # Dictionaries
 1. Creating a Dictionary:
    * You can create a dictionary by enclosing key-value pairs in curly braces `{}`.
@@ -70,4 +70,4 @@
      ```
 
 The examples above demonstrate the process of creating dictionaries, accessing their values using keys, modifying values, and iterating over dictionaries to access keys, values, or key-value pairs. Dictionaries in Python provide a powerful way to store and manage data using key-value associations.
-<span style="color:green"><em>Unclassified</em></span>
+Unclassified
